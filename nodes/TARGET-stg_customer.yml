@@ -134,8 +134,6 @@ operation:
     sourceMapping:
       - aliases:
           customer: 0416955a-7b50-435f-b3c2-f9688ce6b4c5
-        customSQL:
-          customSQL: ""
         dependencies:
           - locationName: SRC
             nodeName: customer

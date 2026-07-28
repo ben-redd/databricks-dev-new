@@ -148,8 +148,6 @@ operation:
     sourceMapping:
       - aliases:
           orders: 5522efec-98b5-4d08-8732-a39ab06facf9
-        customSQL:
-          customSQL: ""
         dependencies:
           - locationName: SRC
             nodeName: orders

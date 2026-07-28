@@ -1,0 +1,134 @@
+fileVersion: 1
+id: 8722f1ac-783c-4d4c-b488-340484f1932d
+name: fct_nation
+operation:
+  config:
+    groupByAll: false
+    insertStrategy: UNION ALL
+    orderby: false
+    orderbycolumn:
+      items:
+        - {}
+    postSQL: ""
+    preSQL: ""
+    selectDistinct: false
+    testsEnabled: false
+    truncateBefore: false
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: TARGET
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f01e511e-358a-40a7-9e1a-fd445c628a4e
+          stepCounter: 8722f1ac-783c-4d4c-b488-340484f1932d
+        config: {}
+        dataType: LONG
+        description: ""
+        name: n_nationkey
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 6f39e9ab-db74-4e39-acef-130f792d612e
+                stepCounter: 93278356-56cd-465e-ba17-80dd4a1542b9
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: cd33e1f7-eb79-42a4-8abc-d0f71afddc02
+          stepCounter: 8722f1ac-783c-4d4c-b488-340484f1932d
+        config: {}
+        dataType: STRING
+        description: ""
+        name: n_name
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 4bcf5e18-8e04-4624-8f85-e8a0db726993
+                stepCounter: 93278356-56cd-465e-ba17-80dd4a1542b9
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: b7f8a967-bcf0-44b8-a1e7-859ef123e923
+          stepCounter: 8722f1ac-783c-4d4c-b488-340484f1932d
+        config: {}
+        dataType: LONG
+        description: ""
+        name: n_regionkey
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: c4a31615-da28-4995-9d6f-8a38552eccdf
+                stepCounter: 93278356-56cd-465e-ba17-80dd4a1542b9
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5e474a9f-ea38-43e1-88f1-258b2f69b719
+          stepCounter: 8722f1ac-783c-4d4c-b488-340484f1932d
+        config: {}
+        dataType: STRING
+        description: ""
+        name: n_comment
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 22e874ee-a9bf-41a4-9905-2d33f7172487
+                stepCounter: 93278356-56cd-465e-ba17-80dd4a1542b9
+            transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: a518b001-83f1-4134-90e5-020a93f07497
+          stepCounter: 8722f1ac-783c-4d4c-b488-340484f1932d
+        config: {}
+        dataType: TIMESTAMP
+        defaultValue: ""
+        description: ""
+        isSystemCreateDate: true
+        name: system_create_date
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: b6dc1ff4-0757-4503-8b2e-93e74fb14f68
+          stepCounter: 8722f1ac-783c-4d4c-b488-340484f1932d
+        config: {}
+        dataType: TIMESTAMP
+        defaultValue: ""
+        description: ""
+        isSystemUpdateDate: true
+        name: system_update_date
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          stg_nation: 93278356-56cd-465e-ba17-80dd4a1542b9
+        dependencies:
+          - locationName: TARGET
+            nodeName: stg_nation
+        join:
+          joinCondition: FROM {{ ref('TARGET', 'stg_nation') }} `stg_nation`
+        name: fct_nation
+        noLinkRefs: []
+  name: fct_nation
+  overrideSQL: false
+  schema: ""
+  sqlType: Fact
+  type: sql
+  version: 1
+type: Node

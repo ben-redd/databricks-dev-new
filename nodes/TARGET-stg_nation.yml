@@ -78,8 +78,6 @@ operation:
     sourceMapping:
       - aliases:
           nation: 5ebf969a-34a1-4866-9aa4-9336b7a1453d
-        customSQL:
-          customSQL: ""
         dependencies:
           - locationName: SRC
             nodeName: nation

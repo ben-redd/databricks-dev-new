@@ -64,8 +64,6 @@ operation:
     sourceMapping:
       - aliases:
           region: 573c0fb2-d564-4ec9-b41a-c0881bf441a7
-        customSQL:
-          customSQL: ""
         dependencies:
           - locationName: SRC
             nodeName: region

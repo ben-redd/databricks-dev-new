@@ -120,8 +120,6 @@ operation:
     sourceMapping:
       - aliases:
           supplier: e7514863-25c4-4c3e-b55a-2db0c7691b0b
-        customSQL:
-          customSQL: ""
         dependencies:
           - locationName: SRC
             nodeName: supplier
